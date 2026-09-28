@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SearchIcon } from "@/components/icons/SearchIcon";
 import { StarIcon } from "@/components/icons/StarIcon";
 import { AvatarStack } from "@/components/common/AvatarStack";
+import { HeroOrnament } from "@/components/common/HeroOrnament";
 
 export function Hero() {
   return (
@@ -15,15 +16,40 @@ export function Hero() {
         className="pointer-events-none object-cover"
       />
 
-      {/* Decorative flourishes (desktop only) */}
+      {/* Decorative 3D ornaments (desktop only) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 hidden lg:block"
+        className="pointer-events-none absolute inset-x-0 top-0 hidden aspect-1440/1024 w-full lg:block"
       >
-        <div className="absolute left-10 top-24 size-24 rotate-12 rounded-[40%] border-[6px] border-secondary-400/80" />
-        <div className="absolute right-16 top-16 size-0 border-x-[22px] border-b-[38px] border-x-transparent border-b-white/80" />
-        <div className="absolute bottom-10 left-24 size-28 rounded-full border-[18px] border-white/70" />
-        <div className="absolute bottom-24 right-28 size-14 rotate-45 rounded-lg bg-secondary-400/70" />
+        <HeroOrnament
+          image="/images/ornaments/spiral-lime.png"
+          className="absolute -left-4 top-[21.58%] bottom-[40.82%] w-96.25"
+        />
+
+        <HeroOrnament
+          image="/images/ornaments/spiral-white-sm.png"
+          className="absolute left-[calc(50%-449.5px)] top-[46.58%] bottom-[36.33%] w-43.75 -translate-x-1/2"
+        />
+
+        <HeroOrnament
+          image="/images/ornaments/donut-white.png"
+          className="absolute bottom-0 left-[calc(50%-531px)] top-[46.6%] w-85.5 -translate-x-1/2"
+        />
+
+        <HeroOrnament
+          image="/images/ornaments/cone-lime.png"
+          className="absolute -right-13 top-[21.58%] bottom-[42.29%] w-92.5"
+        />
+
+        <HeroOrnament
+          image="/images/ornaments/triangle-white.png"
+          className="absolute left-[calc(50%+480px)] top-[45.31%] bottom-[36.33%] w-47 -translate-x-1/2"
+        />
+
+        <HeroOrnament
+          image="/images/ornaments/spiral-white-lg.png"
+          className="absolute left-[calc(50%+502px)] top-[50.63%] bottom-[2.15%] w-82.5 -translate-x-1/2"
+        />
       </div>
 
       <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 text-center lg:gap-[60px] lg:px-0">
