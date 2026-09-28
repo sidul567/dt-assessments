@@ -5,7 +5,7 @@ import { COURSE_CATEGORIES, FEATURED_COURSES } from "@/constants/courses";
 export function FeaturedCourses() {
   return (
     <section className="bg-white py-18">
-      < className="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 lg:px-0">
+      <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 lg:px-0">
       <div className="flex flex-col items-center gap-4 text-center">
         <h2 className="max-w-2xl font-heading text-3xl font-semibold tracking-[-0.44px] text-neutral-950 lg:text-[44px] lg:leading-[1.2]">
           Discover Your Passion, Build Your Skills

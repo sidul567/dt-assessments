@@ -3,7 +3,7 @@ import { Logo } from "@/components/icons/Logo";
 import { CartIcon } from "@/components/icons/CartIcon";
 import { NAV_LINKS } from "@/constants/navigation";
 import { MobileMenu } from "@/components/common/MobileMenu";
-import { cn } from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 interface NavbarProps {
   className: string;

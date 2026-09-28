@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const AVATARS = [
+const HERO_AVATARS = [
   "/images/avatar-1.png",
   "/images/avatar-2.png",
   "/images/avatar-3.png",
@@ -10,22 +10,44 @@ const AVATARS = [
   "/images/avatar-7.png",
 ];
 
-export function AvatarStack() {
+interface AvatarStackProps {
+  avatars?: string[];
+  size?: number;
+  overlap?: number;
+  badgeLabel?: string;
+  badgeClassName?: string;
+}
+
+export function AvatarStack({
+  avatars = HERO_AVATARS,
+  size = 43,
+  overlap = 16,
+  badgeLabel = "2K+",
+  badgeClassName = "bg-neutral-950 text-neutral-50",
+}: AvatarStackProps) {
   return (
     <div className="flex items-center">
-      {AVATARS.map((src, index) => (
+      {avatars.map((src, index) => (
         <Image
           key={src}
           src={src}
           alt=""
-          width={43}
-          height={43}
-          className="-mr-4 rounded-full ring-2 ring-white"
-          style={{ zIndex: AVATARS.length - index }}
+          width={size}
+          height={size}
+          className="rounded-full ring-2 ring-white"
+          style={{
+            zIndex: avatars.length - index,
+            width: size,
+            height: size,
+            marginRight: -overlap,
+          }}
         />
       ))}
-      <div className="-mr-4 flex size-[43px] items-center justify-center rounded-full bg-neutral-950 text-xs font-bold text-neutral-50 ring-2 ring-white">
-        2K+
+      <div
+        className={`flex items-center justify-center rounded-full text-xs font-bold ring-2 ring-white ${badgeClassName}`}
+        style={{ width: size, height: size, marginRight: -overlap }}
+      >
+        {badgeLabel}
       </div>
     </div>
   );
