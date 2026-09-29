@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SignalIcon } from "@/components/icons/SignalIcon";
 import { RatingStarIcon } from "@/components/icons/RatingStarIcon";
 import { AvatarStack } from "@/components/common/AvatarStack";
@@ -17,7 +18,10 @@ interface CourseCardProps {
 
 export function CourseCard({ course }: CourseCardProps) {
   return (
-    <article className="flex w-full flex-col rounded-3xl border border-neutral-200 bg-white p-[15px] sm:max-w-[373px]">
+    <Link
+      href={`/courses/${course.slug}`}
+      className="flex w-full flex-col rounded-3xl border border-neutral-200 bg-white p-[15px] sm:max-w-[373px]"
+    >
       <div className="relative h-[195px] overflow-hidden rounded-xl bg-neutral-800">
         <Image
           src={course.image}
@@ -77,6 +81,6 @@ export function CourseCard({ course }: CourseCardProps) {
           <RatingStarIcon className="size-6 text-neutral-200" />
         </span>
       </div>
-    </article>
+    </Link>
   );
 }

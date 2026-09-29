@@ -14,7 +14,7 @@ const buttonVariants = cva(
         ghost: "rounded-full text-neutral-700 hover:bg-neutral-50",
       },
       size: {
-        default: "px-6 py-3 text-lg leading-[22px]",
+        default: "px-6 py-3 text-lg leading-[24px]",
         icon: "px-4 py-3",
       },
     },
