@@ -67,6 +67,7 @@ export function Hero() {
 
         <form
           role="search"
+          action="/search"
           className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:items-center"
         >
           <label htmlFor="course-search" className="sr-only">
@@ -74,6 +75,7 @@ export function Hero() {
           </label>
           <Input
             id="course-search"
+            name="q"
             type="search"
             placeholder="Course, topic, creator"
             icon={<SearchIcon className="size-6 shrink-0 text-neutral-400" />}
