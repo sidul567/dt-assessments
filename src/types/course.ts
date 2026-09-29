@@ -18,6 +18,11 @@ export interface CourseLesson {
   duration: string;
 }
 
+export interface CourseModule {
+  title: string;
+  description: string;
+}
+
 export interface CourseDetail {
   slug: string;
   title: string;
@@ -41,4 +46,9 @@ export interface CourseDetail {
   lessons: CourseLesson[];
   moreLessonsLabel: string;
   enrollPrompt: string;
+  modulesIntro: string;
+  modules: CourseModule[];
+  lessonContentText: string;
+  progressTrackingText: string;
+  learningProgress: number;
 }

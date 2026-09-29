@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { CourseAboutTab } from "./CourseAboutTab";
+import { CourseLessonsTab } from "./CourseLessonsTab";
 import type { CourseDetail } from "@/types/course";
 
 interface CourseOverviewProps {
@@ -12,7 +12,7 @@ const COURSE_TABS = ["About", "Lessons", "Reviews"];
 export function CourseOverview({ course }: CourseOverviewProps) {
   return (
     <div className="flex max-w-[723px] flex-col gap-10">
-      <Tabs defaultValue={COURSE_TABS[0]}>
+      <Tabs defaultValue={COURSE_TABS[0]} className="gap-10">
         <TabsList className="h-auto! flex-wrap justify-start gap-4 bg-transparent p-0">
           {COURSE_TABS.map((tab) => (
             <TabsTrigger
@@ -24,57 +24,15 @@ export function CourseOverview({ course }: CourseOverviewProps) {
             </TabsTrigger>
           ))}
         </TabsList>
+
+        <TabsContent value="About">
+          <CourseAboutTab course={course} />
+        </TabsContent>
+
+        <TabsContent value="Lessons">
+          <CourseLessonsTab course={course} />
+        </TabsContent>
       </Tabs>
-
-      <div className="flex flex-col gap-6">
-        <h2 className="font-heading text-xl font-semibold tracking-[-0.2px] text-neutral-950">
-          Description
-        </h2>
-        <div className="flex flex-col gap-4 text-base leading-relaxed text-neutral-700">
-          {course.description.map((paragraph) => (
-            <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-6">
-        <h2 className="font-heading text-xl font-semibold tracking-[-0.2px] text-neutral-950">
-          Sneak Peak
-        </h2>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {course.sneakPeek.map((image) => (
-            <div
-              key={image}
-              className="relative aspect-167/125 overflow-hidden rounded-2xl bg-neutral-100"
-            >
-              <Image
-                src={image}
-                alt=""
-                fill
-                sizes="167px"
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-6">
-        <h2 className="font-heading text-xl font-semibold tracking-[-0.2px] text-neutral-950">
-          Key Points
-        </h2>
-        <ul className="flex flex-col gap-3">
-          {course.keyPoints.map((point) => (
-            <li
-              key={point}
-              className="flex items-start gap-2 text-base leading-relaxed text-neutral-700"
-            >
-              <CheckCircleIcon className="size-6 shrink-0 text-primary-800" />
-              {point}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

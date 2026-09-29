@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CourseHero } from "./_components/CourseHero";
-import { CourseSidebar } from "./_components/CourseSidebar";
 import { CourseOverview } from "./_components/CourseOverview";
 import { COURSE_DETAILS } from "@/constants/courseDetails";
 
