@@ -37,7 +37,6 @@ Do not over-engineer the project or introduce unnecessary architecture, abstract
 * Do not introduce new dependencies unless necessary.
 * Remove unused imports, variables, and code.
 * Do not add comments unless requested.
-* Always store/download/create images in `.webp` format.
 * Do not implement functionality that is not required by the assessment.
 * Do not invent business logic or requirements.
 
