@@ -3,6 +3,8 @@ import { SearchIcon } from "@/components/icons/SearchIcon";
 import { StarIcon } from "@/components/icons/StarIcon";
 import { AvatarStack } from "@/components/common/AvatarStack";
 import { HeroOrnament } from "@/components/common/HeroOrnament";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -65,26 +67,20 @@ export function Hero() {
 
         <form
           role="search"
-          className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-start sm:justify-center"
+          className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:items-center"
         >
-          <div className="flex h-[52px] w-full items-center gap-2 rounded-3xl bg-neutral-white px-6 py-3 sm:w-[461px]">
-            <SearchIcon className="size-6 shrink-0 text-neutral-400" />
-            <label htmlFor="course-search" className="sr-only">
-              Search for a course, topic, or creator
-            </label>
-            <input
-              id="course-search"
-              type="search"
-              placeholder="Course, topic, creator"
-              className="w-full bg-transparent text-lg text-neutral-950 placeholder:text-neutral-400 focus:outline-none"
-            />
-          </div>
-          <button
-            type="submit"
-            className="shrink-0 rounded-3xl bg-secondary-400 px-6 py-3 text-lg font-medium text-neutral-950 transition-colors hover:bg-secondary-300"
-          >
-            Search
-          </button>
+          <label htmlFor="course-search" className="sr-only">
+            Search for a course, topic, or creator
+          </label>
+          <Input
+            id="course-search"
+            type="search"
+            placeholder="Course, topic, creator"
+            icon={<SearchIcon className="size-6 shrink-0 text-neutral-400" />}
+            className="text-lg text-neutral-950 placeholder:text-neutral-400"
+            wrapperClassName="sm:w-[461px]"
+          />
+          <Button type="submit">Search</Button>
         </form>
 
         <div className="relative mt-4 flex w-full max-w-[578px] justify-center lg:mt-8">
