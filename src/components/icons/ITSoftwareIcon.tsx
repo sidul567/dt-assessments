@@ -1,0 +1,18 @@
+import type { SVGProps } from "react";
+
+export function ITSoftwareIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 36 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M30 21C31.65 21 32.985 19.65 32.985 18L33 3C33 1.35 31.65 0 30 0H6C4.35 0 3 1.35 3 3V18C3 19.65 4.35 21 6 21H0V24H36V21H30ZM6 3H30V18H6V3Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
