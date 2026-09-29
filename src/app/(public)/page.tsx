@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <PartnerLogos />
       <FeaturedCourses />
-      <PlatformHighlights />
       <CourseCategories />
+      <PlatformHighlights />
       <Testimonials />
     </>
   );
