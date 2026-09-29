@@ -23,6 +23,21 @@ export interface CourseModule {
   description: string;
 }
 
+export interface CourseRatingBreakdown {
+  stars: number;
+  count: number;
+  percent: number;
+}
+
+export interface CourseReview {
+  name: string;
+  role: string;
+  avatar: string;
+  rating: number;
+  timeAgo: string;
+  comment: string;
+}
+
 export interface CourseDetail {
   slug: string;
   title: string;
@@ -51,4 +66,8 @@ export interface CourseDetail {
   lessonContentText: string;
   progressTrackingText: string;
   learningProgress: number;
+  reviewsIntro: string;
+  overallRating: number;
+  ratingBreakdown: CourseRatingBreakdown[];
+  reviews: CourseReview[];
 }

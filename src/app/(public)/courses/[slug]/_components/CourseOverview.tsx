@@ -1,6 +1,7 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { CourseAboutTab } from "./CourseAboutTab";
 import { CourseLessonsTab } from "./CourseLessonsTab";
+import { CourseReviewsTab } from "./CourseReviewsTab";
 import type { CourseDetail } from "@/types/course";
 
 interface CourseOverviewProps {
@@ -31,6 +32,10 @@ export function CourseOverview({ course }: CourseOverviewProps) {
 
         <TabsContent value="Lessons">
           <CourseLessonsTab course={course} />
+        </TabsContent>
+
+        <TabsContent value="Reviews">
+          <CourseReviewsTab course={course} />
         </TabsContent>
       </Tabs>
     </div>
