@@ -40,9 +40,7 @@ export default function SearchPage() {
             ))}
           </div>
 
-          <div className="flex justify-center mt-8">
-            <Pagination />
-          </div>
+          <Pagination totalPages={5} className="mt-8" />
         </div>
       </section>
     </>

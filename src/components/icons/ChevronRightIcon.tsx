@@ -10,7 +10,7 @@ export function ChevronRightIcon(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        d="M8.59 16.59L10 18L16 12L10 6L8.59 7.41L13.17 12L8.59 16.59Z"
+        d="M6.115 20.23L7.885 22L17.885 12L7.885 2L6.115 3.77L14.345 12L6.115 20.23Z"
         fill="currentColor"
       />
     </svg>
