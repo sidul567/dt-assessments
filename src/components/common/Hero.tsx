@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { SearchIcon } from "@/components/icons/SearchIcon";
 import { StarIcon } from "@/components/icons/StarIcon";
 import { AvatarStack } from "@/components/common/AvatarStack";
 import { HeroOrnament } from "@/components/common/HeroOrnament";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { SearchForm } from "@/components/common/SearchForm";
 
 export function Hero() {
   return (
@@ -65,24 +63,9 @@ export function Hero() {
           </p>
         </div>
 
-        <form
-          role="search"
-          action="/courses"
-          className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:items-center"
-        >
-          <label htmlFor="course-search" className="sr-only">
-            Search for a course, topic, or creator
-          </label>
-          <Input
-            id="course-search"
-            name="q"
-            placeholder="Course, topic, creator"
-            icon={<SearchIcon className="size-6 shrink-0 text-neutral-400" />}
-            className="text-lg text-neutral-950 placeholder:text-neutral-400"
-            wrapperClassName="sm:w-[461px]"
-          />
-          <Button type="submit">Search</Button>
-        </form>
+        <SearchForm id="course-search" placeholder="Course, topic, creator">
+          Search
+        </SearchForm>
 
         <div className="relative mt-4 flex w-full max-w-[578px] justify-center lg:mt-8">
           <div className="relative aspect-[578/541] w-full">

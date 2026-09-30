@@ -1,22 +1,10 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
 import { CourseHero } from "./_components/CourseHero";
 import { CourseOverview } from "./_components/CourseOverview";
 import { COURSE_DETAILS } from "@/constants/courseDetails";
 
-interface CourseDetailsPageProps {
-  params: Promise<{ slug: string }>;
-}
-
-export default async function CourseDetailsPage({
-  params,
-}: CourseDetailsPageProps) {
-  const { slug } = await params;
-  const course = COURSE_DETAILS[slug];
-
-  if (!course) {
-    notFound();
-  }
+export default async function CourseDetailsPage() {
+  const course = COURSE_DETAILS["build-digital-asset"];
 
   return (
     <>
