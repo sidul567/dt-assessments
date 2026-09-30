@@ -23,7 +23,7 @@ export function Hero() {
       >
         <HeroOrnament
           image="/images/ornaments/spiral-lime.png"
-          className="absolute -left-4 top-[21.58%] bottom-[40.82%] w-96.25"
+          className="absolute left-0 top-[21.58%] bottom-[40.82%] w-60"
         />
 
         <HeroOrnament
@@ -38,7 +38,7 @@ export function Hero() {
 
         <HeroOrnament
           image="/images/ornaments/cone-lime.png"
-          className="absolute -right-13 top-[21.58%] bottom-[42.29%] w-92.5"
+          className="absolute -right-20 top-[21.58%] bottom-[42.29%] w-50"
         />
 
         <HeroOrnament

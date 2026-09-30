@@ -20,37 +20,37 @@ export function CreatorCta() {
       >
         <HeroOrnament
           image="/images/ornaments/cta-spiral-lime.png"
-          className="absolute top-[-33.2%] bottom-[54.3%] left-10 w-96.25 -translate-x-1/2"
+          className="absolute top-[-29.2%] bottom-[54.3%] left-10 w-70 -translate-x-1/2"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-spiral-white.png"
-          className="absolute top-[1.02%] bottom-[63.11%] left-[calc(50%-454.5px)] w-43.75 -translate-x-1/2 -scale-x-100"
+          className="absolute top-[1.02%] bottom-[63.11%] left-[calc(50%-454.5px)] w-23.75 -translate-x-1/2 -scale-x-100"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-blob-white.png"
-          className="absolute top-[1.23%] bottom-[22.95%] left-[calc(50%+891px)] w-92.5 -translate-x-1/2"
+          className="absolute top-[1.23%] bottom-[22.95%] right-0 w-42.5 translate-x-[40%]"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-triangle-lime.png"
-          className="absolute top-0 bottom-[61.48%] left-[calc(50%+454px)] w-47 -translate-x-1/2"
+          className="absolute top-0 bottom-[61.48%] left-[calc(50%+454px)] w-37 -translate-x-1/2"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-zigzag-lime-lg.png"
-          className="absolute top-[59.22%] bottom-[-26.84%] left-[calc(50%+555px)] w-82.5 -translate-x-1/2"
+          className="absolute top-[59.22%] bottom-[-26.84%] left-[calc(50%+555px)] w-52.5 -translate-x-1/2"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-cone-white.png"
-          className="absolute top-[46.11%] bottom-[15.37%] left-20 w-47 -translate-x-1/2"
+          className="absolute top-[46.11%] bottom-[15.37%] left-0 w-37"
         />
 
         <HeroOrnament
           image="/images/ornaments/cta-donut-lime.png"
-          className="absolute top-[61.27%] bottom-[-31.35%] left-[calc(50%-529px)] w-85.5 -translate-x-1/2"
+          className="absolute top-[61.27%] bottom-[-31.35%] left-[calc(50%-529px)] w-65.5 -translate-x-1/2"
         />
       </div>
 
