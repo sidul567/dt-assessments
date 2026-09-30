@@ -1,10 +1,32 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { SearchIcon } from "@/components/icons/SearchIcon";
 import { ChevronDownIcon } from "@/components/icons/ChevronDownIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export function CoursesHero() {
+interface CoursesHeroProps {
+  defaultQuery?: string;
+}
+
+export function CoursesHero({ defaultQuery = "" }: CoursesHeroProps) {
+  const router = useRouter();
+
+  function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const query = new FormData(event.currentTarget).get("q");
+    const params = new URLSearchParams();
+
+    if (typeof query === "string" && query.trim() !== "") {
+      params.set("q", query.trim());
+    }
+
+    const queryString = params.toString();
+    router.push(queryString ? `/courses?${queryString}` : "/courses");
+  }
+
   return (
     <section className="relative overflow-hidden bg-primary-800 pt-28 pb-16 text-neutral-50 md:pt-40 md:pb-20">
       <Image
@@ -23,7 +45,7 @@ export function CoursesHero() {
 
         <form
           role="search"
-          action="/courses"
+          onSubmit={handleSubmit}
           className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-center sm:justify-center"
         >
           <label htmlFor="search-page-query" className="sr-only">
@@ -33,6 +55,7 @@ export function CoursesHero() {
             id="search-page-query"
             name="q"
             type="search"
+            defaultValue={defaultQuery}
             placeholder="Search"
             icon={<SearchIcon className="size-6 shrink-0 text-neutral-400" />}
             className="text-lg text-neutral-950 placeholder:text-neutral-400"

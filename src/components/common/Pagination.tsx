@@ -9,17 +9,17 @@ import {
 } from "@/components/ui/pagination";
 import { cn } from "@/lib/utils";
 
-interface CoursesPaginationProps {
+interface PaginationProps {
   totalPages: number;
-  currentPage?: number;
+  currentPage: number;
   className?: string;
 }
 
-export function CoursesPagination({
+export function Pagination({
   totalPages,
-  currentPage = 1,
+  currentPage,
   className,
-}: CoursesPaginationProps) {
+}: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
   const previousPage = Math.max(1, currentPage - 1);
   const nextPage = Math.min(totalPages, currentPage + 1);
