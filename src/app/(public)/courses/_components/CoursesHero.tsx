@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "@/components/icons/ChevronDownIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export function SearchHero() {
+export function CoursesHero() {
   return (
     <section className="relative overflow-hidden bg-primary-800 pt-28 pb-16 text-neutral-50 md:pt-40 md:pb-20">
       <Image
@@ -23,7 +23,7 @@ export function SearchHero() {
 
         <form
           role="search"
-          action="/search"
+          action="/courses"
           className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-center sm:justify-center"
         >
           <label htmlFor="search-page-query" className="sr-only">

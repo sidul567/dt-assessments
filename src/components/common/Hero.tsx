@@ -67,7 +67,7 @@ export function Hero() {
 
         <form
           role="search"
-          action="/search"
+          action="/courses"
           className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-start sm:justify-center sm:items-center"
         >
           <label htmlFor="course-search" className="sr-only">
