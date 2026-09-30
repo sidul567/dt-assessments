@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FOOTER_LINK_GROUPS, FOOTER_LEGAL_LINKS } from "@/constants/footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Logo } from "../icons/Logo";
 
 export function Footer() {
   return (
@@ -16,16 +17,8 @@ export function Footer() {
                 className="flex w-fit items-center gap-2"
                 aria-label="ByteSpace home"
               >
-                <Image
-                  src="/images/logo-mark.png"
-                  alt=""
-                  width={32}
-                  height={32}
-                  className="h-8 w-8"
+                <Logo
                 />
-                <span className="font-heading text-2xl font-semibold text-neutral-950">
-                  ByteSpace
-                </span>
               </Link>
               <p className="text-sm leading-[1.6]">
                 Stay Up to date with our latest features and releases by

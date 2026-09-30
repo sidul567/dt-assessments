@@ -14,7 +14,7 @@ export function Navbar({ className }: NavbarProps) {
     <header className={cn("text-neutral-50", className)}>
       <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 md:h-[120px] lg:px-0">
         <Link href="/" className="shrink-0" aria-label="ByteSpace home">
-          <Logo className="h-6 w-auto md:h-8" />
+          <Logo />
         </Link>
 
         <nav
