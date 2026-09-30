@@ -12,16 +12,17 @@ const CARD_AVATARS = [
   "/images/avatars-sm/avatar-4.png",
 ];
 
+const CARD_CLASSNAME =
+  "flex w-full flex-col rounded-3xl border border-neutral-200 bg-white p-[15px] sm:max-w-[373px]";
+
 interface CourseCardProps {
   course: Course;
+  linked?: boolean;
 }
 
-export function CourseCard({ course }: CourseCardProps) {
-  return (
-    <Link
-      href={`/courses/${course.slug}`}
-      className="flex w-full flex-col rounded-3xl border border-neutral-200 bg-white p-[15px] sm:max-w-[373px]"
-    >
+export function CourseCard({ course, linked = true }: CourseCardProps) {
+  const content = (
+    <>
       <div className="relative h-[195px] overflow-hidden rounded-xl bg-neutral-800">
         <Image
           src={course.image}
@@ -81,6 +82,16 @@ export function CourseCard({ course }: CourseCardProps) {
           <RatingStarIcon className="size-6 text-neutral-200" />
         </span>
       </div>
+    </>
+  );
+
+  if (!linked) {
+    return <div className={CARD_CLASSNAME}>{content}</div>;
+  }
+
+  return (
+    <Link href={`/courses/${course.slug}`} className={CARD_CLASSNAME}>
+      {content}
     </Link>
   );
 }

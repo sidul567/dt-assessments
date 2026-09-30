@@ -9,6 +9,7 @@ const inputWrapperVariants = cva(
       variant: {
         filled: "rounded-3xl bg-neutral-white",
         outline: "rounded-full border border-neutral-200 bg-transparent",
+        field: "rounded-xl border border-neutral-100 bg-white",
       },
     },
     defaultVariants: {

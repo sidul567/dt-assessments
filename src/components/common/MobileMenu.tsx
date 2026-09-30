@@ -54,7 +54,7 @@ export function MobileMenu() {
               Sign In
             </Link>
             <Link
-              href="/join"
+              href="/register"
               className="rounded-lg bg-secondary-400 px-3 py-3 text-center text-neutral-950"
             >
               Join Us
