@@ -1,4 +1,4 @@
-import { CategoryCard } from "@/components/common/CategoryCard";
+import { CategoryCard } from "./CategoryCard";
 import { COURSE_CATEGORY_ITEMS } from "@/constants/categories";
 
 export function CourseCategories() {

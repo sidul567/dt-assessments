@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TestimonialCard } from "@/components/common/TestimonialCard";
+import { TestimonialCard } from "./TestimonialCard";
 import { TESTIMONIALS } from "@/constants/testimonials";
 
 export function Testimonials() {

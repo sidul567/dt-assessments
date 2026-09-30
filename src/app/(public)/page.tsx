@@ -1,10 +1,10 @@
-import { Hero } from "@/components/common/Hero";
-import { PartnerLogos } from "@/components/common/PartnerLogos";
-import { FeaturedCourses } from "@/components/common/FeaturedCourses";
-import { PlatformHighlights } from "@/components/common/PlatformHighlights";
-import { CourseCategories } from "@/components/common/CourseCategories";
-import { CreatorCta } from "@/components/common/CreatorCta";
-import { Testimonials } from "@/components/common/Testimonials";
+import { Hero } from "./_components/Hero";
+import { PartnerLogos } from "./_components/PartnerLogos";
+import { FeaturedCourses } from "./_components/FeaturedCourses";
+import { PlatformHighlights } from "./_components/PlatformHighlights";
+import { CourseCategories } from "./_components/CourseCategories";
+import { CreatorCta } from "./_components/CreatorCta";
+import { Testimonials } from "./_components/Testimonials";
 
 export default function Home() {
   return (
