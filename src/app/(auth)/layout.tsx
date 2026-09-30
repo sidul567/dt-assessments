@@ -16,11 +16,13 @@ export default function AuthLayout({ children }: React.PropsWithChildren) {
 
       <header className="relative mx-auto flex h-20 w-full max-w-[1200px] items-center px-6 md:h-[120px] lg:px-0">
         <Link href="/" aria-label="ByteSpace home">
-          <LogoMini className="h-8 w-auto" />
+          <LogoMini />
         </Link>
       </header>
 
-      <main className="relative flex-1">{children}</main>
+      <main className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col gap-10 px-6 pb-16 lg:flex-row lg:items-start lg:justify-between lg:px-0">
+        {children}
+      </main>
     </div>
   );
 }

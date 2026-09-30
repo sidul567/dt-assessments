@@ -33,7 +33,7 @@ export function Navbar({ className }: NavbarProps) {
         </nav>
 
         <div className="hidden items-center gap-6 text-base md:flex">
-          <Link href="/sign-in">Sign In</Link>
+          <Link href="/login">Sign In</Link>
           <Link href="/register">Join Us</Link>
           <Link href="/cart" aria-label="Cart">
             <CartIcon className="size-6" />

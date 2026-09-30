@@ -50,7 +50,7 @@ export function MobileMenu() {
             </Link>
           ))}
           <div className="mt-2 flex flex-col gap-1 border-t border-white/10 pt-3">
-            <Link href="/sign-in" className="rounded-lg px-3 py-3">
+            <Link href="/login" className="rounded-lg px-3 py-3">
               Sign In
             </Link>
             <Link

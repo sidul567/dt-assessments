@@ -1,12 +1,14 @@
+import { cn } from "cn";
 import type { SVGProps } from "react";
 
-export function LogoMini(props: SVGProps<SVGSVGElement>) {
+export function LogoMini({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 29 32"
+      viewBox="0 0 29 37"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      className={cn("h-6 w-auto md:h-8", className)}
       {...props}
     >
       <g className="fill-secondary-400">

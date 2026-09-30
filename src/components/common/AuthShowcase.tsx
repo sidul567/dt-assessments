@@ -6,16 +6,20 @@ import { FEATURED_COURSES } from "@/constants/courses";
 
 const [, digitalAssetCourse, bigDataCourse] = FEATURED_COURSES;
 
-export function RegisterShowcase() {
+interface AuthShowcaseProps {
+  title: string;
+  description: string;
+}
+
+export function AuthShowcase({ title, description }: AuthShowcaseProps) {
   return (
     <div className="relative text-neutral-50 lg:h-[784px] lg:w-[500px]">
       <div className="relative z-10 flex flex-col gap-4">
         <h2 className="font-heading text-xl font-semibold tracking-[-0.2px]">
-          Sign up and come in
+          {title}
         </h2>
         <p className="max-w-[475px] text-lg">
-          The registration process is straightforward, uncomplicated, and
-          efficient, allowing users to sign up quickly, easily, and at no cost
+          {description}
         </p>
       </div>
 
