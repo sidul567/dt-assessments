@@ -76,7 +76,6 @@ export function Hero() {
           <Input
             id="course-search"
             name="q"
-            type="search"
             placeholder="Course, topic, creator"
             icon={<SearchIcon className="size-6 shrink-0 text-neutral-400" />}
             className="text-lg text-neutral-950 placeholder:text-neutral-400"
